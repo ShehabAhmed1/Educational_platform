@@ -35,56 +35,64 @@ const SidebarData = [
 function Sidebar({ setOpen, theme, open }) {
   const [active, setActive] = useState("الرئيسية");
   return (
-    <motion.aside
-      variants={fromRight({ duration: 0.4, delay: 0 })}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      className={`fixed  top-0 right-0 bottom-0 h-screen w-[250px] z-50 bg-bg-secondary flex-col gap-5 items-center  border-l-1 border-border transition-all duration-500 ease-in-out ${
-        open ? "right-0 " : "right-[-250px] lg:right-0"
-      }`}
-    >
-      <div className="flex items-center justify-between lg:justify-center w-full p-2 border-b-1 border-border ">
-        <img
-          src={theme === "light" ? "/logo.png" : "/logo_dark.png"}
-          alt=""
-          className="w-10 h-10 md:w-14 md:h-14 object-contain cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out rounded-full"
-        />
-        <IoClose
-          className="w-6  block  lg:hidden h-6 text-text-main cursor-pointer"
-          onClick={() => setOpen(false)}
-        />
-      </div>
-      <div className="flex flex-col gap-5 w-full">
-        <ul className="flex flex-col gap-5 mt-5 items-center w-full p-5">
-          {SidebarData.map((item) => (
-            <li key={item.title} className="w-full">
-              <Link
-                to={item.link}
-                className={`tajawal-bold text-text-muted w-full p-2 flex items-center justify-center rounded-lg hover:bg-primary hover:text-white  ${
-                  active === item.title ? "bg-primary text-white" : ""
-                }`}
-                onClick={() => setActive(item.title)}
-              >
-                <div className="flex items-center justify-center gap-2">
-                  {item.icon}
-                  {item.title}
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <div className="flex items-center justify-center w-full absolute bottom-0 right-0 ">
-          <Mainlink1
-            path="/"
-            className="bg-transparent border-t-2 border-border rounded-none  flex items-center justify-center gap-2 w-full  py-5 !text-text-muted hover:bg-transparent hover:!text-error hover:gap-4 "
-          >
-            <IoLogInOutline className="w-6 h-6" />
-            تسجيل الخروج
-          </Mainlink1>
+    <>
+      <motion.aside
+        variants={fromRight({ duration: 0.4, delay: 0 })}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        className={`fixed  top-0 right-0 bottom-0 h-screen w-[250px] z-100 bg-bg-secondary flex-col gap-5 items-center  border-l-1 border-border transition-all duration-500 ease-in-out ${
+          open ? "right-0 " : "right-[-250px] lg:right-0"
+        }`}
+      >
+        <div className="flex items-center justify-between lg:justify-center w-full p-2 border-b-1 border-border ">
+          <img
+            src={theme === "light" ? "/logo.png" : "/logo_dark.png"}
+            alt=""
+            className="w-10 h-10 md:w-14 md:h-14 object-contain cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out rounded-full"
+          />
+          <IoClose
+            className="w-6  block  lg:hidden h-6 text-text-main cursor-pointer"
+            onClick={() => setOpen(false)}
+          />
         </div>
-      </div>
-    </motion.aside>
+        <div className="flex flex-col gap-5 w-full">
+          <ul className="flex flex-col gap-5 mt-5 items-center w-full p-5">
+            {SidebarData.map((item) => (
+              <li key={item.title} className="w-full">
+                <Link
+                  to={item.link}
+                  className={`tajawal-bold text-text-muted w-full p-2 flex items-center justify-center rounded-lg hover:bg-primary hover:text-white  ${
+                    active === item.title ? "bg-primary text-white" : ""
+                  }`}
+                  onClick={() => setActive(item.title)}
+                >
+                  <div className="flex items-center justify-center gap-2">
+                    {item.icon}
+                    {item.title}
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="flex items-center justify-center w-full absolute bottom-0 right-0 ">
+            <Mainlink1
+              path="/"
+              className="bg-transparent border-t-2 border-border rounded-none  flex items-center justify-center gap-2 w-full  py-5 !text-text-muted hover:bg-transparent hover:!text-error hover:gap-4 "
+            >
+              <IoLogInOutline className="w-6 h-6" />
+              تسجيل الخروج
+            </Mainlink1>
+          </div>
+        </div>
+      </motion.aside>
+      <div
+        onClick={() => setOpen(false)}
+        className={`fixed top-0 left-0 right-0 bottom-0 bg-bg-main/50 dark:bg-bg-main/75 z-50 w-full h-full ${
+          open ? "block" : "hidden"
+        }`}
+      ></div>
+    </>
   );
 }
 
