@@ -21,7 +21,7 @@ function isPhoneNumber(num) {
 function isHumanName(name) {
   name = name.trim();
   const nameRegex =
-    /^[\u0621-\u064A\u064B-\u0652]+(?: [\u0621-\u064A\u064B-\u0652]+){2}$/;
+    /^[\u0621-\u064A\u064B-\u0652]+(?:\s+[\u0621-\u064A\u064B-\u0652]+){2,3}$/;
   return nameRegex.test(name);
 }
 
