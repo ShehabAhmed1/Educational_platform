@@ -4,9 +4,11 @@ import { FaUsers, FaBook, FaChalkboardTeacher } from "react-icons/fa";
 import LectureCard from "../../../components/_studentDashboard/_mainboard/LectureCard";
 import { statisticsData } from "../../../assets/helper/data";
 import { lecturesData } from "../../../assets/helper/data";
+import { ToTop } from "../../../assets/helper/component";
 function Mainboard() {
   return (
     <section id="mainboard">
+      <ToTop />
       <Hello />
       <div className="flex flex-col items-center justify-center gap-2 mt-4">
         <div className="tajawal-bold relative text-text-main text-right text-xl pb-2 before:content-[''] before:block before:w-full before:h-1 before:bg-decorate1 before:rounded-full before:absolute before:-bottom-1 ">

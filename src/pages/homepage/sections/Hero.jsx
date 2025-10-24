@@ -3,7 +3,7 @@ import heroImage from "../../../assets/imgs/hero_bg2.jpeg";
 import { zoomout } from "../../../assets/helper/functions";
 import { motion } from "framer-motion";
 import { Mainlink1 } from "../../../components/_reusable/Mainlink1";
-import seperator from "../../../assets/imgs/seperator.svg";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 function Hero() {
   return (
     <section
@@ -37,14 +37,12 @@ function Hero() {
             >
               انضم لعيلتنا
             </Mainlink1>
+            <div className="mt-10 text-3xl text-text-main animate-bounce duration-100">
+              <MdKeyboardDoubleArrowDown />
+            </div>
           </motion.div>
         </div>
       </div>
-      {/* <img
-        src={seperator}
-        alt=""
-        className="absolute bottom-0 left-0 right-0 w-full"
-      /> */}
     </section>
   );
 }

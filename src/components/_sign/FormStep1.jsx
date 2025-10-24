@@ -39,7 +39,7 @@ function FormStep1({ handleNext, formData, setFormData }) {
       <form action="" onSubmit={handleErrorsNext}>
         <input
           type="text"
-          placeholder="اسمك ثلاثي"
+          placeholder="اسمك ثلاثي باللغة العربية"
           value={formData.studentName}
           required
           onChange={(e) =>

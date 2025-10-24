@@ -6,6 +6,7 @@ import Teachers from "./sections/Teachers";
 import Courses from "./sections/Courses";
 import HonorWall from "./sections/HonorWall";
 import Footer from "../../components/_reusable/Footer";
+import Btnup from "../../components/_reusable/Btnup";
 function Homepage() {
   return (
     <section id="Homepage">
@@ -16,6 +17,7 @@ function Homepage() {
       <Courses />
       <HonorWall />
       <Footer />
+      <Btnup />
     </section>
   );
 }

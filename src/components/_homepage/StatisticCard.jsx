@@ -17,7 +17,7 @@ function StatisticCard({ statistic }) {
         <statistic.icon />
       </span>
       <Counter target={statistic.value} duration={1500} />
-      <h3 className={`text-lg md:text-xl font-semibold text-white`}>
+      <h3 className={`text-lg md:text-xl font-semibold text-white text-center`}>
         {statistic.title}
       </h3>
     </motion.div>

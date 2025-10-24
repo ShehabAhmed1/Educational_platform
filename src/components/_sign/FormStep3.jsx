@@ -45,7 +45,7 @@ function FormStep3({ handleNext, handleBack, formData, setFormData }) {
       <form action="" onSubmit={handleErrorsNext}>
         <input
           type="tel"
-          placeholder="رقم الهاتف بديل الايميل "
+          placeholder="رقم تليفون هنستخدمه بدل الايميل"
           value={formData.EmailPhone}
           onChange={(e) =>
             setFormData({ ...formData, EmailPhone: e.target.value })

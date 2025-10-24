@@ -1,8 +1,10 @@
 import React from "react";
+import { ToTop } from "../../../assets/helper/component";
 
 function Exams() {
   return (
     <section>
+      <ToTop />
       <div className="content min-h-screen">
         <EmptyExams />
       </div>

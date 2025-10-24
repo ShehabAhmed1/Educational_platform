@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import LectureCard from "../../../components/_studentDashboard/_mainboard/LectureCard";
 import { lecturesData } from "../../../assets/helper/data";
+import { ToTop } from "../../../assets/helper/component";
+
 function Lectures() {
   //states
   const [filter, setFilter] = useState({
@@ -23,12 +25,9 @@ function Lectures() {
     setFilteredData(filtered);
   }, [filter]);
 
-  //scroll to top
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <section>
+      <ToTop />
       <div className="content">
         <div className="flex flex-col items-center  justify-center gap-2 mt-4">
           <h2 className="tajawal-bold relative text-text-main text-right text-xl pb-2 before:content-[''] before:block before:w-full before:h-1 before:bg-decorate1 before:rounded-full before:absolute before:-bottom-1 ">

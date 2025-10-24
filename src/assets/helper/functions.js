@@ -12,12 +12,14 @@ function toggleTheme() {
 
 //check on phone number
 function isPhoneNumber(num) {
+  num = num.trim();
   const phoneRegex = /^01[0-9]{9}$/;
   return phoneRegex.test(num);
 }
 
 //check on name
 function isHumanName(name) {
+  name = name.trim();
   const nameRegex =
     /^[\u0621-\u064A\u064B-\u0652]+(?: [\u0621-\u064A\u064B-\u0652]+){2}$/;
   return nameRegex.test(name);

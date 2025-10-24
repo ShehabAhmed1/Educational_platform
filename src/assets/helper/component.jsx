@@ -56,4 +56,15 @@ function Counter({ target, duration }) {
   );
 }
 
-export { Error, Counter };
+//to top
+function ToTop() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
+  return <></>;
+}
+export { Error, Counter, ToTop };
