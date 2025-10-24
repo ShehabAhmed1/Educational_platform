@@ -1,0 +1,145 @@
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  /* ===== LIGHT THEME ===== */
+  --color-bg-main: #f5f7fa;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #5bd4c854;
+  --color-bg-Fourth: #bdcadb93;
+
+  --color-border: #cbd5e1;
+
+  --color-text-main: #0f172a;
+  --color-text-muted: #94a3b8;
+
+  --color-primary: #295be3;
+  --color-primary-hover: #3b83dc;
+
+  --color-decorate1: #14b8a6;
+  --color-decorate2: #ebf2fe;
+  --color-success: #16a34a;
+  --color-success-hover: #3fda78;
+  --color-warning: #ca8a04;
+  --color-error: #dc2626;
+  --color-info: #0284c7;
+  --color-icon1: #f5aa1e;
+  --color-icon2: #ec6b21;
+  --color-icon3: #3c83f6;
+}
+
+[data-theme="dark"] {
+  /* ===== DARK THEME ===== */
+  --color-bg-main: #0c1427;
+  --color-bg-secondary: #18212f;
+  --color-bg-tertiary: #03242f;
+  --color-bg-Fourth: #334155;
+
+  --color-border: #334155;
+
+  --color-text-main: #ffffff;
+  --color-text-muted: #94a3b8;
+
+  --color-primary: #5f96db;
+  --color-primary-hover: #2563eb;
+
+  --color-decorate1: #14b8a6;
+  --color-decorate2: #283b5b;
+  --color-success: #16a34a;
+  --color-success-hover: #3fda78;
+  --color-warning: #facc15;
+  --color-error: #ef4444;
+  --color-info: #38bdf8;
+
+  --color-icon1: #f5aa1e;
+  --color-icon2: #ec6b21;
+  --color-icon3: #3c83f6;
+}
+
+@theme {
+  --color-bg-main: var(--color-bg-main);
+  --color-bg-secondary: var(--color-bg-secondary);
+  --color-bg-tertiary: var(--color-bg-tertiary);
+  --color-bg-Fourth: var(--color-bg-Fourth);
+
+  --color-border: var(--color-border);
+
+  --color-text-main: var(--color-text-main);
+  --color-text-muted: var(--color-text-muted);
+
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+
+  --color-decorate1: var(--color-decorate1);
+  --color-decorate2: var(--color-decorate2);
+  --color-success: var(--color-success);
+  --color-success-hover: var(--color-success-hover);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+  --color-info: var(--color-info);
+
+  --color-icon1: var(--color-icon1);
+  --color-icon2: var(--color-icon2);
+  --color-icon3: var(--color-icon3);
+}
+
+.main_container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 15px;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+}
+
+/*
+all styles tajawal to use it in any place
+*/
+
+.tajawal-extralight {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.tajawal-light {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.tajawal-regular {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tajawal-medium {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.tajawal-bold {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tajawal-extrabold {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.tajawal-black {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
